@@ -1,0 +1,161 @@
+/* Initialization */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #222222;
+    font-family: Inter, BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-sans;
+    color: #cdcdcd;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+input {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+button {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    font-weight: inherit;
+}
+li {
+    list-style: none;
+}
+
+/* Setting the nav-container */
+nav {
+    height: 65px;
+    min-width: max-content;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #1b1b1b;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+/* Heights & aligning content into center */
+ul, li, a {
+    height: 100%;
+}
+nav > *, a, .li-theme, .li-search, .li-get-mdn {
+    display: flex;
+    align-items: center;
+}
+
+/* Clickable area */
+li {
+    margin: 0 8px;
+}
+.left-nav span {
+    padding: 10px 8px;
+    border-radius: 5px;
+}
+.right-nav > li:nth-child(3) a {
+    padding: 0 8px;
+}
+
+/* Setting the rest design */
+.left-nav {
+    font-size: 16px;
+}
+.right-nav {
+    font-size: 14px;
+    font-weight: 600;
+}
+.li-theme > button {
+    padding: 5px 5px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.search-box {
+    padding: 2px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    border: 0.75px solid #cdcdcd;
+}
+.search-box > button {
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    margin: 0 5px 0 2px;
+}
+.search-box > button:nth-of-type(1) {
+    margin: 0;
+    padding: 0;
+    width: 0;
+}
+.search-box > input {
+    border-bottom: 2px #85abf2 solid;
+    margin: 0 5px 0 15px;
+    width: 16px;
+    color: transparent;
+}
+.get-mdn {
+    background-color: white;
+    color: #1b1b1b;
+    height: initial;
+    padding: 6px 16px;
+    border-radius: 5px;
+}
+.get-mdn > span {
+    position: relative;
+    bottom: 1px;
+}
+
+/* Transitions */
+.left-nav span {
+    transition: 0.25s;
+}
+.li-theme > button {
+    transition: 0.25s;
+}
+.search-box > input {
+    transition: 0.5s 0.2s;
+}
+.search-box > button:nth-of-type(1) {
+    transition: 0.5s 0.2s, background-color 0.25s;
+}
+
+/* Animations */
+.left-nav > li:hover span {
+    background-color: #8cb4ff70;
+    color: #8cb4ff;
+}
+.li-theme > button:hover {
+    background-color: #85858590;
+}
+.li-get-mdn > a:hover {
+    background-color: #cdcdcd;
+}
+.search-box:hover > input, .search-box:focus-within > input {
+    width: 150px;
+    border-bottom: #1b1b1b 2px solid;
+    color: inherit;
+}
+.search-box:hover > button:nth-of-type(1), .search-box:focus-within > button:nth-of-type(1) {
+    width: 25px;
+    padding: 5px;
+    margin: 0 0 0 2px;
+}
+.search-box > button:nth-of-type(1):hover {
+    background-color: #85858590;
+}

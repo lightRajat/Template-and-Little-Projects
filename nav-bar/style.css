@@ -1,0 +1,105 @@
+/* Initialization */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222222;
+    font-family: sans-serif;
+    font-size: 150%;
+    color: aquamarine;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+input {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Setting the container on the page */
+nav {
+    background-color: tan;
+    height: 55px;
+    max-width: 100%;
+    min-width: max-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Selector lists for heights and aligning content center */
+nav > *, a, .li-theme, .li-search, .search-box {
+    display: flex;
+    align-items: center;
+}
+ul, li, a {
+    height: 100%;
+}
+
+/* Setting the clickable area of links */
+a {
+    background-color: rgb(179, 133, 73);
+    padding: 0 20px;
+    margin: 0 10px;
+}
+.li-theme > button {
+    background-color: rgba(27, 15, 189);
+    padding: 8px 15px;
+    border-radius: 100px;
+    font-size: smaller;
+    cursor: pointer;
+}
+
+/* Search */
+.search-box {
+    border-radius: 50px;
+    padding: 2px;
+    border: 2px aquamarine solid;
+    position: fixed;
+}
+.search-box > button {
+    font-size: smaller;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s 0.2s;
+    order: -1;
+}
+.search-box > input {
+    font-size: smaller;
+    color: transparent;
+    margin: 0 10px;
+    width: 15px;
+    border-bottom: aquamarine solid 2px;
+    transition: 0.5s 0.2s;
+}
+.search-box:hover > button, .search-box:focus-within > button {
+    background: aquamarine;
+    color: tan;
+}
+.search-box:hover > input, .search-box:focus-within > input {
+    width: 150px;
+    color: aquamarine;
+    border-bottom: transparent;
+}

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222;
+    color: #eee;
+    font-size: 150%;
+    font-family: cursive;
+    text-align: center;
+}
+button {
+    font-family: inherit;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 30px;
+    transition: 0.15s;
+    border: none;
+}
+button:hover, button.active {
+    font-size: 15px;
+    color: aquamarine;
+    background-color: #495454;
+    border: #b0d3d3 solid 1.5px;
+}
+span {
+    color: aquamarine;
+}
